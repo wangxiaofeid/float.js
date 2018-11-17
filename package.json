@@ -1,5 +1,5 @@
 {
-  "name": "float.js",
+  "name": "@xiaofei.wang/float.js",
   "version": "1.0.0",
   "description": "浮动数运算",
   "main": "lib/index.js",
