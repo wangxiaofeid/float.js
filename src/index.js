@@ -8,8 +8,8 @@ function getDismantling(inputNum) {
   if (isFloat(inputNumFormat)) {
     let n1Str = inputNumFormat.toString().split('.');
     left = parseInt(n1Str[0]);
-    right = parseInt(n1Str[1]);
-    length = n1Str[1].length;
+    right = parseInt(n1Str[1] || '0');
+    length = n1Str[1] ? n1Str[1].length : 0;
   } else {
     left = inputNumFormat;
   }
@@ -61,7 +61,7 @@ export function plus(n1, n2) {
     return n1
   }
   const { left1, left2, right1, right2, num } = dismantle(n1, n2);
-  let left = left1 + left2, right = right1 + right2, radix =10*num;;
+  let left = left1 + left2, right = right1 + right2, radix = 10 * num;;
   if (left >= 0 && right >= 0) {
     return parseFloat(`${left + Math.floor(right/radix)}.${right%radix}`)
   } else if (left >= 0 && right < 0) {
