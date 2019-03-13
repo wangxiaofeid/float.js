@@ -8,7 +8,7 @@ $ yarn add float.js
 ```javascript
 const floatJs = require('@xiaofei.wang/float.js');
 or
-import floatJs, { plus, minus } from '@xiaofei.wang/float.js';
+import floatJs, { plus, minus, ride } from '@xiaofei.wang/float.js';
 
 0.2 + 0.1 = 0.30000000000000004
 plus(0.2, 0.1) === 0.3
